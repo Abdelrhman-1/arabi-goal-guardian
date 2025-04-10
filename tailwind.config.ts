@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,6 +53,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+                // Football-themed colors
+                field: {
+                    DEFAULT: '#2e7d32', // Field green
+                    light: '#4caf50',
+                    dark: '#1b5e20',
+                },
+                team: {
+                    red: '#d32f2f',
+                    blue: '#1976d2',
+                    white: '#f5f5f5',
+                    black: '#212121',
+                },
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +97,20 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'pulse-glow': {
+                    '0%, 100%': {
+                        opacity: '1',
+                    },
+                    '50%': {
+                        opacity: '0.6',
+                    },
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'pulse-glow': 'pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
 			}
 		}
 	},
